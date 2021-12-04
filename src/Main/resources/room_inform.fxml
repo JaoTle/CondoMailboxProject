@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="manageRoom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Condo.controller.ManageRoomController">
+   <children>
+      <Pane fx:id="roomInfor" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="647.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE ROOM INFORMATION" />
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="45.0" layoutX="85.0" layoutY="140.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <Label fx:id="roomNum" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="146.0" prefHeight="21.0" prefWidth="157.0" styleClass="roomNum" stylesheets="@css/setText.css" text="roomnumber" textAlignment="CENTER" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="324.0" layoutX="85.0" layoutY="285.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="444.0" />
+            <Label fx:id="roomType" layoutX="129.0" layoutY="321.0" prefHeight="36.0" prefWidth="369.0" styleClass="showRoom" stylesheets="@css/setText.css" text="roomType" />
+            <Label fx:id="building" layoutX="129.0" layoutY="464.0" prefHeight="36.0" prefWidth="369.0" styleClass="showRoom" stylesheets="@css/setText.css" text="building" />
+            <Label fx:id="roomdata" layoutX="129.0" layoutY="374.0" prefHeight="74.0" prefWidth="369.0" styleClass="showRoom" stylesheets="@css/setText.css" text="roomData" />
+            <Label fx:id="floor" layoutX="129.0" layoutY="536.0" prefHeight="36.0" prefWidth="369.0" styleClass="showRoom" stylesheets="@css/setText.css" text="floor" />
+            <Pane fx:id="suitePn" layoutX="596.0" layoutY="225.0" prefHeight="446.0" prefWidth="359.0" style="-fx-background-color: #C6FCE5;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="49.0" prefHeight="36.0" prefWidth="98.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Roomer 1 :" />
+                  <TextField fx:id="roomer1" layoutX="134.0" layoutY="50.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="114.0" prefHeight="36.0" prefWidth="98.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Roomer 2 :" />
+                  <TextField fx:id="roomer2" layoutX="134.0" layoutY="115.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="181.0" prefHeight="36.0" prefWidth="98.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Roomer 3 :" />
+                  <TextField fx:id="roomer3" layoutX="137.0" layoutY="182.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="247.0" prefHeight="36.0" prefWidth="98.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Roomer 4 :" />
+                  <TextField fx:id="roomer4" layoutX="137.0" layoutY="248.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Button fx:id="saveSBt" layoutX="248.0" layoutY="318.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="79.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="deluxePn" layoutX="596.0" layoutY="224.0" prefHeight="466.0" prefWidth="359.0" style="-fx-background-color: #C6FCE5;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="49.0" prefHeight="36.0" prefWidth="98.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Roomer 1 :" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="118.0" prefHeight="36.0" prefWidth="98.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Roomer 2 :" />
+                  <Button fx:id="saveDBt" layoutX="240.0" layoutY="190.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="79.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </Button>
+                  <TextField fx:id="room2" layoutX="129.0" layoutY="119.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <TextField fx:id="room1" layoutX="129.0" layoutY="50.0" styleClass="field_1" stylesheets="@css/setText.css" />
+               </children>
+            </Pane>
+            <Button fx:id="BackBt" layoutX="897.0" layoutY="709.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="79.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Back">
+               <padding>
+                  <Insets bottom="2.0" top="2.0" />
+               </padding>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="addRm" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+         <children>
+            <Pane layoutX="152.0" layoutY="265.0" prefHeight="418.0" prefWidth="724.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="418.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="724.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="68.0" layoutY="55.0" prefHeight="30.0" prefWidth="112.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Building :" />
+                  <MenuButton fx:id="build" layoutX="207.0" layoutY="54.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" styleClass="dropdown" stylesheets="@css/dropdown.css" text="Building">
+                    <items>
+                      <MenuItem fx:id="buildA" mnemonicParsing="false" onAction="#handleMenu" text="A" />
+                      <MenuItem fx:id="buildB" mnemonicParsing="false" onAction="#handleMenu" text="B" />
+                    </items>
+                  </MenuButton>
+                  <Label alignment="CENTER_RIGHT" layoutX="124.0" layoutY="119.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Floor :" />
+                  <TextField fx:id="floorText" layoutX="207.0" layoutY="116.0" minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="112.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Label alignment="CENTER_RIGHT" layoutX="73.0" layoutY="184.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Room type :" />
+                  <MenuButton fx:id="type" alignment="CENTER" layoutX="207.0" layoutY="181.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="dropdown" stylesheets="@css/dropdown.css" text="Type">
+                    <items>
+                      <MenuItem fx:id="Deluxe" mnemonicParsing="false" onAction="#handleMenu" text="Deluxe" />
+                      <MenuItem fx:id="Suite" mnemonicParsing="false" onAction="#handleMenu" text="Suite" />
+                    </items>
+                  </MenuButton>
+                  <Label alignment="CENTER_RIGHT" layoutX="47.0" layoutY="248.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Room number:" />
+                  <TextField fx:id="roomnumText" layoutX="207.0" layoutY="245.0" minHeight="0.0" minWidth="0.0" onMouseClicked="#handleMenu" prefHeight="36.0" prefWidth="112.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <ImageView fitHeight="371.0" fitWidth="261.0" layoutX="411.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/room.png" />
+                     </image>
+                     <effect>
+                        <DropShadow color="#000000b2" height="39.66" offsetX="3.0" offsetY="1.0" radius="15.442499999999999" width="24.11" />
+                     </effect>
+                  </ImageView>
+                  <Button fx:id="SaveAdd" layoutX="236.0" layoutY="341.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="79.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="647.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE ROOM INFORMATION" />
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="157.0" layoutY="184.0" opacity="0.7" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="7.0" prefHeight="21.0" prefWidth="167.0" styleClass="topicText" stylesheets="@css/setText.css" text="Add room" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="100.0" fitWidth="105.0" layoutX="81.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/buildings.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="BackBt1" layoutX="897.0" layoutY="709.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="79.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Back">
+               <padding>
+                  <Insets bottom="2.0" top="2.0" />
+               </padding>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="manageRm" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="647.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE ROOM INFORMATION" />
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+            <ImageView fitHeight="217.0" fitWidth="268.0" layoutX="127.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/keys2.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="51.0" layoutX="448.0" layoutY="196.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="416.0">
+               <effect>
+                  <DropShadow color="#00000080" height="15.0" offsetX="5.0" offsetY="5.0" radius="7.0" width="15.0" />
+               </effect>
+            </Rectangle>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="516.0" layoutY="208.0" prefHeight="30.0" prefWidth="217.0" styleClass="topFillText" stylesheets="@css/setText.css" text="ENTER ROOM NUMBER" textAlignment="CENTER" />
+            <ImageView fitHeight="51.0" fitWidth="91.0" layoutX="756.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/typing.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="304.0" layoutX="462.0" layoutY="319.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="399.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="593.0" layoutY="371.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Room number :" textAlignment="CENTER" />
+            <TextField fx:id="room" layoutX="568.0" layoutY="451.0" prefHeight="40.0" prefWidth="186.0" styleClass="field_1" stylesheets="@css/setText.css" />
+            <Button fx:id="okBt" layoutX="630.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleRoomHome" prefHeight="40.0" prefWidth="64.0" styleClass="okBt" stylesheets="@css/Button.css" text="OK" />
+            <Button fx:id="addRoom" layoutX="916.0" layoutY="715.0" mnemonicParsing="false" onAction="#handleRoomHome" styleClass="saveBut" stylesheets="@css/Button.css" text="Add room" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

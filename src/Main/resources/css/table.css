@@ -1,0 +1,39 @@
+
+.table {
+    -fx-background-color : #C6FCE5;
+}
+.table .column-header-background {
+    -fx-background-color : #3D84A8;
+}
+
+.table .column-header-background .label {
+    -fx-background-color : transparent;
+    -fx-text-fill : white;
+    -fx-font-family: 'Bai Jamjuree';
+}
+
+.table .column-header{
+    -fx-background-color : transparent;
+}
+.table .table-cell{
+    -fx-text-fill : #48466D;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-pref-height : 40;
+}
+.table-row-cell{
+    -fx-background-color : -fx-table-cell-border-color , #6EF3D6;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+}
+
+.table-row-cell:odd {
+    -fx-background-color : -fx-table-cell-border-color , #C6FCE5;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+}
+
+.table-row-cell:hover{
+    -fx-background-color: #0dceda;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+}

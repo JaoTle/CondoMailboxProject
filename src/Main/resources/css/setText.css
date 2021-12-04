@@ -1,0 +1,73 @@
+.setDateTime{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size : 17;
+}
+.setReceiveTime{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size : 17;
+}
+.homeText {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 20;
+}
+
+.topicText{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 25;
+    -fx-text-fill :#48466D;
+}
+
+.topicText_1{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 20;
+    -fx-font-weight : bold;
+    -fx-text-fill :#48466D;
+}
+.setPerson {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 20;
+    -fx-text-fill : #6EF3D6;
+}
+.field_1 {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 17;
+    -fx-background-color: white;
+    -fx-background-radius : 20;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 20;
+    -fx-border-color:  #6EF3D6;
+}
+
+.field_2{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 17;
+    -fx-background-color: white;
+    -fx-background-radius : 20;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 20;
+    -fx-border-color: #46CDCF;
+}
+
+.upText{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 25;
+    -fx-text-fill : #C6FCE5;
+}
+
+.topFillText {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 20;
+    -fx-text-fill : #3D84A8;
+}
+
+.roomNum{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 23;
+    -fx-text-fill : #3D84A8;
+}
+
+.showRoom {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 25;
+    -fx-text-fill : #46CDCF;
+}

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MailPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Condo.controller.ManageMailController">
+   <children>
+      <Pane fx:id="AcceptedMail" prefHeight="768.0" prefWidth="1028.0">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="615.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE MAILBOX INFORMATION" />
+                  <Button fx:id="backToList" layoutX="27.0" layoutY="17.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="27.0" prefWidth="74.0" styleClass="topBtn" stylesheets="@css/Button.css" text="Back">
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+            <TableView fx:id="acceptedList" layoutY="61.0" prefHeight="707.0" prefWidth="1028.0" styleClass="table" stylesheets="@css/table.css">
+              <columns>
+                <TableColumn fx:id="roomCol" text="Room" />
+                <TableColumn fx:id="NameCol" prefWidth="175.0" text="Name" />
+                  <TableColumn fx:id="getbyCol" prefWidth="140.0" text="Get by" />
+                  <TableColumn fx:id="statusCol" prefWidth="100.0" text="Status" />
+                  <TableColumn fx:id="acceptCol" prefWidth="200.0" text="Accepted Time" />
+                  <TableColumn fx:id="staffCol" prefWidth="174.0" text="Staff that receive" />
+                  <TableColumn fx:id="getFrom" prefWidth="158.0" text="Get from" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="addInform" prefHeight="768.0" prefWidth="1028.0">
+         <children>
+            <AnchorPane layoutY="124.0" prefHeight="645.0" prefWidth="1028.0">
+               <children>
+                  <Pane fx:id="documentPn" prefHeight="645.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+                     <children>
+                        <Pane layoutX="40.0" layoutY="338.0" prefHeight="278.0" prefWidth="767.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="30.0" layoutY="14.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="224.0" layoutX="29.0" layoutY="49.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="17.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Information" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="57.0" layoutY="85.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Height [cm.] :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="72.0" layoutY="154.0" prefHeight="30.0" prefWidth="127.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Width [cm.] :" />
+                              <TextField fx:id="docHeight" layoutX="231.0" layoutY="83.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="docWidth" layoutX="231.0" layoutY="150.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <ImageView fx:id="imgDoc" fitHeight="150.0" fitWidth="175.0" layoutX="498.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="docChoose" layoutX="547.0" layoutY="225.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleChoose" prefHeight="27.0" prefWidth="80.0" styleClass="ch_2But" stylesheets="@css/Button.css" text="Choose..">
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </Button>
+                              <Label alignment="CENTER_RIGHT" layoutX="72.0" layoutY="210.0" prefHeight="30.0" prefWidth="127.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Priority : " />
+                              <MenuButton fx:id="typeBt" alignment="CENTER" contentDisplay="CENTER" layoutX="231.0" layoutY="210.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="111.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" styleClass="dropdown" stylesheets="@css/dropdown.css" text="Priority">
+                                <items>
+                                  <MenuItem fx:id="normal" mnemonicParsing="false" onAction="#handleMenuItem" text="ธรรมดา" />
+                                  <MenuItem fx:id="secret" mnemonicParsing="false" onAction="#handleMenuItem" text="ลับ" />
+                                    <MenuItem fx:id="quick" mnemonicParsing="false" onAction="#handleMenuItem" text="ด่วน" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="54.0" layoutY="16.0" prefHeight="333.0" prefWidth="410.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="15.0" layoutY="16.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="267.0" layoutX="15.0" layoutY="51.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="19.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Receiver" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="59.0" layoutY="72.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="127.0" prefHeight="30.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="58.0" layoutY="180.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Phone :" />
+                              <TextField fx:id="docRcName" layoutX="152.0" layoutY="71.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="docRcSur" layoutX="152.0" layoutY="127.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="docRcPhone" layoutX="152.0" layoutY="180.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="227.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Room Number :" textAlignment="CENTER" />
+                              <TextField fx:id="docRm" layoutX="156.0" layoutY="267.0" prefHeight="31.0" prefWidth="101.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="554.0" layoutY="26.0" prefHeight="254.0" prefWidth="389.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="4.0" layoutY="7.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="205.0" layoutX="4.0" layoutY="42.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+                              <TextField fx:id="docSdPhone" layoutX="141.0" layoutY="180.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="10.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Sender" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="72.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="127.0" prefHeight="30.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="47.0" layoutY="180.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Phone :" />
+                              <TextField fx:id="docSdName" layoutX="141.0" layoutY="71.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="docSdSur" layoutX="141.0" layoutY="127.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="docSaveBt" layoutX="899.0" layoutY="589.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="27.0" prefWidth="74.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                           <padding>
+                              <Insets bottom="2.0" top="1.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="packagePn" prefHeight="645.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+                     <children>
+                        <Pane layoutX="54.0" layoutY="16.0" prefHeight="333.0" prefWidth="410.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="15.0" layoutY="16.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="267.0" layoutX="15.0" layoutY="51.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="19.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Receiver" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="59.0" layoutY="72.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="127.0" prefHeight="30.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="58.0" layoutY="180.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Phone :" />
+                              <TextField fx:id="pacRcName" layoutX="152.0" layoutY="71.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="pacRcSur" layoutX="152.0" layoutY="127.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="pacRcPhone" layoutX="152.0" layoutY="180.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="227.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Room Number :" textAlignment="CENTER" />
+                              <TextField fx:id="pacRm" layoutX="156.0" layoutY="267.0" prefHeight="31.0" prefWidth="101.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="554.0" layoutY="26.0" prefHeight="254.0" prefWidth="389.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="205.0" layoutX="4.0" layoutY="42.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+                              <TextField fx:id="pacSdPhone" layoutX="141.0" layoutY="180.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="4.0" layoutY="7.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="10.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Sender" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="72.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="127.0" prefHeight="30.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="47.0" layoutY="180.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Phone :" />
+                              <TextField fx:id="pacSdName" layoutX="141.0" layoutY="71.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="pacSdSur" layoutX="141.0" layoutY="127.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="pacSaveBt" layoutX="899.0" layoutY="589.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="27.0" prefWidth="74.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                           <padding>
+                              <Insets bottom="2.0" top="1.0" />
+                           </padding>
+                        </Button>
+                        <Pane layoutX="40.0" layoutY="338.0" prefHeight="278.0" prefWidth="767.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="30.0" layoutY="14.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="224.0" layoutX="29.0" layoutY="49.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="17.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Information" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="57.0" layoutY="115.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Height [cm.] :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="72.0" layoutY="170.0" prefHeight="30.0" prefWidth="127.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Width [cm.] :" />
+                              <TextField fx:id="pacHeight" layoutX="231.0" layoutY="113.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="pacWidth" layoutX="231.0" layoutY="166.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <ImageView fx:id="imgPack" fitHeight="150.0" fitWidth="175.0" layoutX="528.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="pacChoose" layoutX="577.0" layoutY="225.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleChoose" prefHeight="27.0" prefWidth="80.0" styleClass="ch_2But" stylesheets="@css/Button.css" text="Choose..">
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </Button>
+                              <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="227.0" prefHeight="30.0" prefWidth="111.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Transport :" />
+                              <MenuButton fx:id="transBt" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="227.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" styleClass="dropdown" stylesheets="@css/dropdown.css" text="Transport" textAlignment="CENTER">
+                                 <items>
+                                    <MenuItem fx:id="flash" mnemonicParsing="false" onAction="#handleMenuItem" text="Flash" />
+                                    <MenuItem fx:id="kerry" mnemonicParsing="false" onAction="#handleMenuItem" text="Kerry" />
+                                    <MenuItem fx:id="thaipost" mnemonicParsing="false" onAction="#handleMenuItem" text="Thaipost" />
+                                 </items>
+                              </MenuButton>
+                              <Label alignment="CENTER_RIGHT" layoutX="57.0" layoutY="64.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Length [cm.] :" />
+                              <TextField fx:id="pacLength" layoutX="231.0" layoutY="62.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Label alignment="CENTER_RIGHT" layoutX="282.0" layoutY="227.0" prefHeight="30.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Track :" />
+                              <TextField fx:id="pacTrack" layoutX="373.0" layoutY="225.0" prefHeight="35.0" prefWidth="156.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="letterPn" layoutY="-1.0" prefHeight="645.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+                     <children>
+                        <Pane layoutX="40.0" layoutY="338.0" prefHeight="278.0" prefWidth="767.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="30.0" layoutY="14.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="224.0" layoutX="29.0" layoutY="49.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="17.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Information" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="57.0" layoutY="106.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Length [cm.] :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="72.0" layoutY="180.0" prefHeight="30.0" prefWidth="127.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Width [cm.] :" />
+                              <TextField fx:id="letLength" layoutX="231.0" layoutY="104.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="letWidth" layoutX="231.0" layoutY="176.0" prefHeight="35.0" prefWidth="142.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <ImageView fx:id="imgLetter" fitHeight="150.0" fitWidth="175.0" layoutX="498.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="letChoose" layoutX="547.0" layoutY="225.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleChoose" prefHeight="27.0" prefWidth="80.0" styleClass="ch_2But" stylesheets="@css/Button.css" text="Choose..">
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="54.0" layoutY="16.0" prefHeight="333.0" prefWidth="410.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="15.0" layoutY="16.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="267.0" layoutX="15.0" layoutY="51.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="19.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Receiver" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="59.0" layoutY="72.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="127.0" prefHeight="30.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="58.0" layoutY="180.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Phone :" />
+                              <TextField fx:id="letRcName" layoutX="152.0" layoutY="71.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="letRcSur" layoutX="152.0" layoutY="127.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="letRcPhone" layoutX="152.0" layoutY="180.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="227.0" prefHeight="30.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Room Number :" textAlignment="CENTER" />
+                              <TextField fx:id="letRm" layoutX="156.0" layoutY="267.0" prefHeight="31.0" prefWidth="101.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="554.0" layoutY="26.0" prefHeight="254.0" prefWidth="389.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="205.0" layoutX="4.0" layoutY="42.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+                              <TextField fx:id="letSdPhone" layoutX="141.0" layoutY="180.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="4.0" layoutY="7.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="142.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="10.0" prefHeight="21.0" prefWidth="142.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Sender" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets right="2.0" />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="72.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="127.0" prefHeight="30.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                              <Label alignment="CENTER_RIGHT" layoutX="47.0" layoutY="180.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Phone :" />
+                              <TextField fx:id="letSdName" layoutX="141.0" layoutY="71.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                              <TextField fx:id="letSdSur" layoutX="141.0" layoutY="127.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="letSaveBt" layoutX="899.0" layoutY="589.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="27.0" prefWidth="74.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                           <padding>
+                              <Insets bottom="2.0" top="1.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Pane layoutY="62.0" prefHeight="60.0" prefWidth="1028.0" style="-fx-background-color: #3D84A8;">
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+               <children>
+                  <Button fx:id="backBt" layoutX="902.0" layoutY="17.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleTabMail" prefHeight="27.0" prefWidth="74.0" styleClass="topBtn" stylesheets="@css/Button.css" text="Back">
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="packBt" layoutX="350.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleTabMail" prefHeight="59.0" prefWidth="175.0" styleClass="mailChooseBtn" stylesheets="@css/Button.css" text="Package">
+                     <effect>
+                        <DropShadow color="#00000099" height="30.0" offsetX="3.0" offsetY="3.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="docBt" layoutX="175.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleTabMail" prefHeight="59.0" prefWidth="175.0" styleClass="mailChooseBtn" stylesheets="@css/Button.css" text="Document">
+                     <effect>
+                        <DropShadow color="#00000099" height="30.0" offsetX="3.0" offsetY="3.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="letterBt" layoutY="-1.0" mnemonicParsing="false" onAction="#handleTabMail" prefHeight="59.0" prefWidth="175.0" styleClass="mailChooseBtn" stylesheets="@css/Button.css" text="Letter">
+                     <effect>
+                        <DropShadow color="#00000099" height="30.0" offsetX="3.0" offsetY="3.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="615.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE MAILBOX INFORMATION" />
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="mailStatus" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="615.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE MAILBOX INFORMATION" />
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d84a8" height="50.0" layoutX="63.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="324.0">
+               <effect>
+                  <DropShadow color="#0000004d" height="15.0" offsetX="5.0" offsetY="5.0" radius="7.0" width="15.0" />
+               </effect>
+            </Rectangle>
+            <Label fx:id="dateReceive" layoutX="78.0" layoutY="117.0" prefHeight="30.0" prefWidth="303.0" style="-fx-text-fill: white;" styleClass="setReceiveTime" stylesheets="@css/setText.css" text="Received date :" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffb2" height="196.0" layoutX="78.0" layoutY="210.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="211.0" />
+            <ImageView fx:id="showImg" fitHeight="150.0" fitWidth="175.0" layoutX="96.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane layoutX="353.0" layoutY="185.0" prefHeight="42.0" prefWidth="111.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Room :" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="245.0" prefHeight="42.0" prefWidth="111.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Name :" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="305.0" prefHeight="42.0" prefWidth="127.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Surname :" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="491.0" layoutY="185.0" prefHeight="42.0" prefWidth="127.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="roomLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="8.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="RoomNum" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="491.0" layoutY="245.0" prefHeight="42.0" prefWidth="224.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="nameLabel" contentDisplay="CENTER" layoutX="23.0" layoutY="8.0" prefHeight="26.0" prefWidth="175.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Name" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="491.0" layoutY="305.0" prefHeight="42.0" prefWidth="224.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="surnameLabel" contentDisplay="CENTER" layoutX="23.0" layoutY="8.0" prefHeight="26.0" prefWidth="175.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Surname" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="75.0" layoutY="476.0" prefHeight="278.0" prefWidth="668.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef0d199" height="42.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="111.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffb2" height="200.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="555.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="23.0" prefHeight="21.0" prefWidth="95.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Update" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="56.0" layoutY="85.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Get by :" />
+                  <TextField fx:id="getby" layoutX="147.0" layoutY="85.0" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="56.0" layoutY="136.0" prefHeight="21.0" prefWidth="74.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Status :" />
+                  <Label fx:id="StatusLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="138.0" prefHeight="21.0" prefWidth="118.0" text="Status" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="checkBox" layoutX="147.0" layoutY="188.0" mnemonicParsing="false" styleClass="checkbox" stylesheets="@css/checkbox.css" text="Accepted" />
+               </children>
+            </Pane>
+            <Button fx:id="saveBt" layoutX="899.0" layoutY="710.0" minHeight="0.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+               <padding>
+                  <Insets bottom="2.0" top="1.0" />
+               </padding>
+            </Button>
+            <Button fx:id="backBtn" layoutX="899.0" layoutY="90.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="27.0" prefWidth="74.0" styleClass="backMail" stylesheets="@css/Button.css" text="Back">
+               <padding>
+                  <Insets bottom="2.0" top="1.0" />
+               </padding>
+            </Button>
+            <Pane layoutX="353.0" layoutY="365.0" prefHeight="42.0" prefWidth="111.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Staff :" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="491.0" layoutY="365.0" prefHeight="42.0" prefWidth="224.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="staffLabel" contentDisplay="CENTER" layoutX="23.0" layoutY="8.0" prefHeight="26.0" prefWidth="175.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Staff" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="443.0" prefHeight="42.0" prefWidth="142.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="6.0" prefHeight="30.0" prefWidth="118.0" styleClass="homeText" stylesheets="@css/setText.css" text="Information :" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="531.0" layoutY="426.0" prefHeight="91.0" prefWidth="266.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="InformLabel" contentDisplay="CENTER" layoutX="23.0" layoutY="8.0" prefHeight="77.0" prefWidth="231.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Inform" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="mailInform" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+               <children>
+                  <Label layoutX="615.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="MANAGE MAILBOX INFORMATION" />
+                  <TextField fx:id="searchText" layoutX="28.0" layoutY="9.0" promptText="Search" styleClass="field_1" stylesheets="@css/setText.css" />
+                  <Button fx:id="addMail" alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="16.0" maxHeight="36.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="64.0" styleClass="topBtn" stylesheets="@css/Button.css" text="Add.." textAlignment="CENTER">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="Accepted" alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="16.0" maxHeight="36.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="30.0" prefWidth="80.0" styleClass="topBtn" stylesheets="@css/Button.css" text="Accepted" textAlignment="CENTER">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow color="#00000059" offsetY="5.0" />
+               </effect>
+            </Pane>
+            <AnchorPane layoutY="61.0" minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="1028.0">
+               <children>
+                  <TableView fx:id="mailList" prefHeight="708.0" prefWidth="1028.0" styleClass="table" stylesheets="@css/table.css">
+                     <columns>
+                        <TableColumn fx:id="viewBt" prefWidth="120.0" style="-fx-alignment: center;" text="View" />
+                        <TableColumn fx:id="receiver" prefWidth="300.0" text="Name" />
+                        <TableColumn fx:id="roomNum" prefWidth="150.0" text="Room" />
+                        <TableColumn fx:id="dateTime" prefWidth="240.0" text="Date &amp; Time" />
+                        <TableColumn fx:id="staffReceive" prefWidth="201.0" text="Staff that receive" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

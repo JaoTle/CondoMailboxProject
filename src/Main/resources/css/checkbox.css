@@ -1,0 +1,13 @@
+.checkbox{
+    -fx-text-fill : #3D84A8;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+.checkbox .box{
+    -fx-background-color: white;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: #3D84A8;
+    -fx-padding: 0.25em;
+}

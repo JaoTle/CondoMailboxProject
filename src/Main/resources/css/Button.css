@@ -1,0 +1,222 @@
+.First {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-background-color: #48466D;
+    -fx-background-radius : 0;
+    -fx-text-fill : white;
+}
+
+.First:hover {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-background-color: #ABEDD8;
+    -fx-background-radius : 0;
+    -fx-text-fill :#48466D;
+}
+
+.okBt {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-background-color: white;
+    -fx-background-radius : 20 ;
+    -fx-text-fill : #46CDCF;
+    -fx-border-width: 2;
+    -fx-border-color: #46CDCF;
+    -fx-border-radius: 20; 
+}
+
+.okBt:hover{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-background-color: #6EF3D6;
+    -fx-background-radius : 20 ;
+    -fx-text-fill : white;
+    -fx-border-width: 2;
+    -fx-border-color: #6EF3D6;
+    -fx-border-radius: 20;
+}
+
+.confirmBut {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-background-color: white;
+    -fx-background-radius : 20 ;
+    -fx-text-fill : #46CDCF;
+    -fx-border-width: 2;
+    -fx-border-color: #46CDCF;
+    -fx-border-radius: 20;
+}
+
+.confirmBut:hover {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-background-color: #6EF3D6;
+    -fx-background-radius : 20 ;
+    -fx-text-fill : white;
+    -fx-border-width: 2;
+    -fx-border-color: #6EF3D6;
+    -fx-border-radius: 20;
+    -fx-font-size: 18;
+}
+
+.tabNow{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+    -fx-background-color: #C6FCE5;
+    -fx-background-radius : 0;
+    -fx-text-fill :#48466D;
+}
+
+.tabNow:hover{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 18;
+    -fx-background-color: #48466D;
+    -fx-background-radius : 0;
+    -fx-text-fill : white;
+}
+
+.tabMenu {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-background-color: #48466D;
+    -fx-background-radius : 0;
+    -fx-text-fill : white;
+}
+
+.tabMenu:hover{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-background-color: #6EF3D6;
+    -fx-background-radius : 0;
+    -fx-text-fill :#48466D;
+}
+
+
+.ch_1But{
+    -fx-text-fill :#46CDCF;
+    -fx-border-color: #46CDCF;
+    -fx-border-width: 2;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-color: white;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+
+.ch_1But:hover{
+    -fx-text-fill :white;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 2;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-color: #46CDCF;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+
+
+.ch_2But{
+    -fx-text-fill :#3D84A8;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 2;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-color: white;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+
+.ch_2But:hover{
+    -fx-text-fill :#3D84A8;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 2;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-color: #6EF3D6;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+.saveBut {
+    -fx-text-fill :#3D84A8;
+    -fx-border-color: #3D84A8;
+    -fx-border-width: 2;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-color: #6EF3D6;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+
+.saveBut:hover{
+    -fx-text-fill :#C6FCE5;
+    -fx-border-color: #3D84A8;
+    -fx-border-width: 2;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-color: #3D84A8;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+
+.topBtn{
+    -fx-text-fill :#48466D;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 3;
+    -fx-background-color: #C6FCE5;
+}
+
+.topBtn:hover{
+    -fx-text-fill :#48466D;
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 15;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 3;
+    -fx-background-color: #6EF3D6;
+}
+
+.mailChooseBtn {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 22;
+    -fx-background-color: #3D84A8;
+    -fx-background-radius : 0;
+    -fx-text-fill : #C6FCE5;
+}
+.mailChooseBtn:hover{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-font-size: 22;
+    -fx-background-color: #C6FCE5;
+    -fx-background-radius : 0;
+    -fx-text-fill : #3D84A8;
+}
+.mailChooseBtn:pressed{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-background-color :#6EF3D6 ;
+    -fx-background-radius : 0 ;
+    -fx-text-fill : #48466D;
+}
+
+.backMail {
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-text-fill : #C6FCE5;
+    -fx-background-color: #3D84A8;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 2;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}
+
+.backMail:hover{
+    -fx-font-family: 'Bai Jamjuree';
+    -fx-text-fill : #48466D;
+    -fx-background-color: #6EF3D6;
+    -fx-border-color: #6EF3D6;
+    -fx-border-width: 2;
+    -fx-background-radius : 20;
+    -fx-border-radius: 20;
+}

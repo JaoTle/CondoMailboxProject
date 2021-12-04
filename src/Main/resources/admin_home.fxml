@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Condo.controller.AdminController">
+   <children>
+      <AnchorPane layoutX="253.0" prefHeight="768.0" prefWidth="1028.0">
+         <children>
+            <Pane fx:id="chPass" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+               <children>
+                  <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+                     <children>
+                        <Label layoutX="763.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="CHANGE PASSWORD" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#00000059" offsetY="5.0" />
+                     </effect>
+                  </Pane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="377.0" layoutX="235.0" layoutY="228.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="558.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ef3d6" height="35.0" layoutX="342.0" layoutY="271.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="337.0" />
+                  <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="298.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/lock.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="659.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/lock.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="418.0" layoutY="270.0" styleClass="topicText" stylesheets="@css/setText.css" text="Change Password" />
+                  <Label layoutX="288.0" layoutY="356.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Old Password :" />
+                  <Label layoutX="280.0" layoutY="423.0" styleClass="topFillText" stylesheets="@css/setText.css" text="New Password :" />
+                  <Label layoutX="337.0" layoutY="490.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Confirm :" />
+                  <PasswordField fx:id="oldFieldpass" layoutX="448.0" layoutY="353.0" prefHeight="37.0" prefWidth="232.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <PasswordField fx:id="newFieldPass" layoutX="448.0" layoutY="420.0" prefHeight="37.0" prefWidth="232.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <PasswordField fx:id="confirmField" layoutX="448.0" layoutY="487.0" prefHeight="37.0" prefWidth="232.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <Button fx:id="okChangeBt" layoutX="485.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleChangePass" prefHeight="31.0" prefWidth="62.0" styleClass="okBt" stylesheets="@css/Button.css" text="OK" />
+               </children>
+            </Pane>
+            <Pane fx:id="createStaff" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+               <children>
+                  <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+                     <children>
+                        <Label layoutX="716.0" layoutY="15.0" styleClass="upText" stylesheets="@css/setText.css" text="CREATE STAFF ACCOUNT" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#00000059" offsetY="5.0" />
+                     </effect>
+                  </Pane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#46cdcf" height="44.0" layoutX="70.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="232.0">
+                     <effect>
+                        <DropShadow color="#00000099" height="20.0" offsetX="3.0" offsetY="-3.0" radius="9.5" width="20.0" />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="218.0" layoutX="70.0" layoutY="162.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="466.0" />
+                  <Label layoutX="95.0" layoutY="122.0" styleClass="upText" stylesheets="@css/setText.css" text="Staff Information" />
+                  <Label layoutX="145.0" layoutY="196.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Name :" />
+                  <TextField fx:id="nameField" layoutX="233.0" layoutY="193.0" prefHeight="37.0" prefWidth="253.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <Label layoutX="120.0" layoutY="259.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Surname :" />
+                  <TextField fx:id="surnameField" layoutX="233.0" layoutY="256.0" prefHeight="37.0" prefWidth="253.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <Label layoutX="164.0" layoutY="322.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Age :" />
+                  <TextField fx:id="ageField" layoutX="233.0" layoutY="319.0" prefHeight="37.0" prefWidth="108.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#46cdcf" height="44.0" layoutX="70.0" layoutY="444.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="232.0">
+                     <effect>
+                        <DropShadow color="#00000099" height="20.0" offsetX="3.0" offsetY="-3.0" radius="9.5" width="20.0" />
+                     </effect>
+                  </Rectangle>
+                  <Label layoutX="103.0" layoutY="447.0" styleClass="upText" stylesheets="@css/setText.css" text="Create Account" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="231.0" layoutX="70.0" layoutY="488.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="507.0" />
+                  <Label layoutX="114.0" layoutY="524.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Username :" />
+                  <TextField fx:id="userField" layoutX="239.0" layoutY="521.0" prefHeight="37.0" prefWidth="253.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <Label layoutX="119.0" layoutY="588.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Password :" />
+                  <Label layoutX="114.0" layoutY="652.0" styleClass="topFillText" stylesheets="@css/setText.css" text="Confirm Password :" />
+                  <PasswordField fx:id="passField" layoutX="239.0" layoutY="585.0" prefHeight="37.0" prefWidth="253.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <PasswordField fx:id="firmField" layoutX="302.0" layoutY="649.0" prefHeight="37.0" prefWidth="253.0" styleClass="field_2" stylesheets="@css/setText.css" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="218.0" layoutX="659.0" layoutY="162.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="243.0" />
+                  <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" layoutX="706.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="chooseFile" layoutX="743.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleChoose" prefHeight="35.0" prefWidth="77.0" styleClass="ch_1But" stylesheets="@css/Button.css" text="Choose" />
+                  <Button fx:id="saveBut" layoutX="874.0" layoutY="702.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleSaveBt" prefHeight="30.0" prefWidth="79.0" styleClass="saveBut" stylesheets="@css/Button.css" text="Save">
+                     <padding>
+                        <Insets bottom="2.0" top="2.0" />
+                     </padding></Button>
+               </children>
+            </Pane>
+            <Pane fx:id="staffInform" prefHeight="768.0" prefWidth="1028.0" style="-fx-background-color: #C6FCE5;">
+               <children>
+                  <Pane prefHeight="62.0" prefWidth="1028.0" style="-fx-background-color: #48466D;">
+                     <children>
+                        <Label layoutX="760.0" layoutY="13.0" styleClass="upText" stylesheets="@css/setText.css" text="STAFF INFORMATION" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#00000059" offsetY="5.0" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="523.0" layoutY="327.0" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Name :" textAlignment="CENTER" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="686.0" layoutY="327.0" prefHeight="42.0" prefWidth="209.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="9.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Name" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="523.0" layoutY="399.0" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Surname :" textAlignment="CENTER" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="686.0" layoutY="399.0" prefHeight="42.0" prefWidth="209.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="surname" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="9.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Surname" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffb2" height="310.0" layoutX="106.0" layoutY="299.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="337.0" />
+                  <ImageView fx:id="showImg" fitHeight="266.0" fitWidth="303.0" layoutX="123.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" style="-fx-alignment: center;" />
+                  <Pane layoutX="523.0" layoutY="473.0" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: white; -fx-opacity: 0.7;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="6.0" prefHeight="21.0" prefWidth="95.0" styleClass="homeText" stylesheets="@css/setText.css" text="Age :" textAlignment="CENTER" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="686.0" layoutY="473.0" prefHeight="42.0" prefWidth="79.0" style="-fx-background-color: #3D84A8; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="age" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="9.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Age" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="backBtn" layoutX="919.0" layoutY="110.0" minHeight="0.0" mnemonicParsing="false" onAction="#handleAdminClick" prefHeight="27.0" prefWidth="74.0" styleClass="backMail" stylesheets="@css/Button.css" text="Back">
+                     <padding>
+                        <Insets bottom="2.0" top="1.0" />
+                     </padding>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d84a8" height="50.0" layoutX="93.0" layoutY="137.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="324.0">
+                     <effect>
+                        <DropShadow color="#0000004d" height="15.0" offsetX="5.0" offsetY="5.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </Rectangle>
+                  <Label fx:id="lastesttime" layoutX="110.0" layoutY="147.0" prefHeight="30.0" prefWidth="303.0" style="-fx-text-fill: white;" styleClass="setReceiveTime" stylesheets="@css/setText.css" text="Last login time :" />
+               </children>
+            </Pane>
+          <AnchorPane fx:id="stList" minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="1028.0">
+               <children>
+                  <TableView fx:id="Stafflist" onMouseClicked="#selectedStaff" prefHeight="768.0" prefWidth="1028.0" styleClass="table" stylesheets="@css/table.css">
+                    <columns>
+                      <TableColumn fx:id="Staffname" prefWidth="250.0" style="-fx-alignment: center;" text="NAME" />
+                        <TableColumn fx:id="StaffSur" prefWidth="250.0" style="-fx-alignment: center;" text="SURNAME" />
+                      <TableColumn fx:id="StaffUser" prefWidth="244.0" text="USERNAME" />
+                        <TableColumn fx:id="StaffTime" prefWidth="268.0" text="TIME" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="768.0" prefWidth="253.0" style="-fx-background-color: #48466D;">
+         <effect>
+            <DropShadow color="#00000066" height="45.0" offsetX="5.0" radius="33.25" width="90.0" />
+         </effect>
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="71.0" layoutX="17.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/manage.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="83.0" layoutY="40.0" styleClass="setPerson" stylesheets="@css/setText.css" text="ADMINSTRATOR" />
+            <Button fx:id="informBut" layoutY="242.0" mnemonicParsing="false" onAction="#handleAdminClick" prefHeight="51.0" prefWidth="253.0" styleClass="tabMenu" stylesheets="@css/Button.css" text="STAFFS INFORMATION">
+               <effect>
+                  <DropShadow color="#0000004d" spread="0.15" />
+               </effect>
+            </Button>
+            <Button fx:id="createBut" layoutY="293.0" mnemonicParsing="false" onAction="#handleAdminClick" prefHeight="51.0" prefWidth="253.0" styleClass="tabMenu" stylesheets="@css/Button.css" text="CREATE STAFF ACCOUNT">
+               <effect>
+                  <DropShadow color="#0000004d" spread="0.15" />
+               </effect>
+            </Button>
+            <Button fx:id="chPassBut" layoutY="344.0" mnemonicParsing="false" onAction="#handleAdminClick" prefHeight="51.0" prefWidth="253.0" styleClass="tabMenu" stylesheets="@css/Button.css" text="CHANGE PASSWORD">
+               <effect>
+                  <DropShadow color="#0000004d" spread="0.15" />
+               </effect>
+            </Button>
+            <Button fx:id="signOut" layoutY="717.0" mnemonicParsing="false" onAction="#handleAdminClick" prefHeight="51.0" prefWidth="253.0" styleClass="tabMenu" stylesheets="@css/Button.css" text="SIGN OUT">
+               <effect>
+                  <DropShadow color="#0000004d" spread="0.15" />
+               </effect>
+            </Button>
+            <Label fx:id="dateTime" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="176.0" prefHeight="30.0" prefWidth="209.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Date &amp; Time" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

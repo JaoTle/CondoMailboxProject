@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="HomePage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Condo.controller.HomeController">
+   <children>
+      <Pane layoutY="230.0" prefHeight="63.0" prefWidth="1280.0" style="-fx-background-color: #48466D;">
+         <children>
+            <Button fx:id="homeBt" layoutX="199.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="59.65" prefWidth="92.0" styleClass="First" text="HOME">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="6.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@css/setText.css" />
+                  <URL value="@css/Button.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="instrucBt" layoutX="291.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="59.65" prefWidth="154.0" text="INSTRUCTION">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="6.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@css/Button.css" />
+                  <URL value="@css/setText.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="setFont" />
+                  <String fx:value="First" />
+               </styleClass>
+            </Button>
+            <Button fx:id="informBt" layoutX="445.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="59.65" prefWidth="162.0" text="INFORMATION">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="6.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@css/Button.css" />
+                  <URL value="@css/setText.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="First" />
+                  <String fx:value="setFont" />
+               </styleClass>
+            </Button>
+            <Label fx:id="dateTime" alignment="CENTER" layoutX="956.0" layoutY="17.0" prefHeight="30.0" prefWidth="281.0" styleClass="setDateTime" stylesheets="@css/setText.css" text="Date &amp; Time" textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="registerBt" layoutX="607.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="121.0" text="REGISTER">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="6.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@css/Button.css" />
+                  <URL value="@css/setText.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="First" />
+                  <String fx:value="setFont" />
+               </styleClass>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="270.0" fitWidth="1280.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/cov_0.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="informP" layoutY="293.0" prefHeight="478.0" prefWidth="1280.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <ImageView fitHeight="431.0" fitWidth="420.0" layoutX="34.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/IMG_5004.JPG" />
+               </image></ImageView>
+            <Label layoutX="577.0" layoutY="144.0" styleClass="topicText_1" stylesheets="@css/setText.css" text="Name :" />
+            <Label layoutX="577.0" layoutY="219.0" styleClass="topicText_1" stylesheets="@css/setText.css" text="Nickname :" />
+            <Label layoutX="576.0" layoutY="288.0" styleClass="topicText_1" stylesheets="@css/setText.css" text="ID :" />
+            <Label fx:id="name" alignment="CENTER" layoutX="662.0" layoutY="144.0" prefHeight="30.0" prefWidth="299.0" styleClass="homeText" stylesheets="@css/setText.css" text="Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="nickname" alignment="CENTER" layoutX="698.0" layoutY="219.0" prefHeight="30.0" prefWidth="139.0" styleClass="homeText" stylesheets="@css/setText.css" text="Nickname">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="codeId" alignment="CENTER" layoutX="626.0" layoutY="288.0" prefHeight="30.0" prefWidth="208.0" styleClass="homeText" stylesheets="@css/setText.css" text="Id">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="instructP" layoutY="293.0" prefHeight="478.0" prefWidth="1280.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <ImageView fitHeight="430.0" fitWidth="1166.0" layoutX="54.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/instructiion.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="regisP" layoutY="293.0" prefHeight="478.0" prefWidth="1280.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <Label layoutX="57.0" layoutY="45.0" prefHeight="30.0" prefWidth="240.0" styleClass="homeText" stylesheets="@css/setText.css" text="REGISTER FOR ROOMER" />
+            <TextField fx:id="Name" layoutX="503.0" layoutY="154.0" prefHeight="42.0" prefWidth="226.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="424.0" layoutY="160.0" styleClass="homeText" stylesheets="@css/setText.css" text="Name :" />
+            <TextField fx:id="room" layoutX="503.0" layoutY="225.0" prefHeight="42.0" prefWidth="121.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="424.0" layoutY="231.0" styleClass="homeText" stylesheets="@css/setText.css" text="Room :" />
+            <ImageView fitHeight="269.0" fitWidth="281.0" layoutX="81.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/door.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="regisUser" layoutX="919.0" layoutY="119.0" prefHeight="42.0" prefWidth="226.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="805.0" layoutY="125.0" styleClass="homeText" stylesheets="@css/setText.css" text="Username :" />
+            <PasswordField fx:id="regisPass" layoutX="919.0" layoutY="198.0" prefHeight="42.0" prefWidth="226.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="807.0" layoutY="204.0" styleClass="homeText" stylesheets="@css/setText.css" text="Password :" />
+            <PasswordField fx:id="confirmRegis" layoutX="919.0" layoutY="276.0" prefHeight="42.0" prefWidth="226.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="729.0" layoutY="282.0" styleClass="homeText" stylesheets="@css/setText.css" text="Confirm Password : " />
+            <Button fx:id="RegisBtn" layoutX="662.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="43.0" prefWidth="105.0" style="-fx-font-size: 17;" styleClass="okBt" stylesheets="@css/Button.css" text="Register" />
+         </children>
+      </Pane>
+      <Pane fx:id="loginP" layoutY="293.0" prefHeight="478.0" prefWidth="1280.0" style="-fx-background-color: #f6f6f6;">
+         <children>
+            <ImageView fitHeight="535.0" fitWidth="756.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/last.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="loginBut" layoutX="1027.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="42.0" prefWidth="85.0" text="LOGIN">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="confirmBut" />
+                  <String fx:value="setFont" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@css/setText.css" />
+                  <URL value="@css/Button.css" />
+               </stylesheets>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="739.0" layoutY="249.0" prefHeight="33.0" prefWidth="127.0" styleClass="homeText" stylesheets="@css/setText.css" text="PASSWORD :" textAlignment="CENTER" textFill="#48466d">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="739.0" layoutY="160.0" prefHeight="33.0" prefWidth="139.0" styleClass="homeText" stylesheets="@css/setText.css" text="USERNAME : " textAlignment="CENTER" textFill="#48466d" />
+            <TextField fx:id="user" layoutX="878.0" layoutY="156.0" prefHeight="42.0" prefWidth="226.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <PasswordField fx:id="pass" layoutX="878.0" layoutY="245.0" prefHeight="42.0" prefWidth="226.0" styleClass="field_1" stylesheets="@css/setText.css">
+               <font>
+                  <Font size="18.0" />
+               </font></PasswordField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
